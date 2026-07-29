@@ -1,0 +1,27 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Datos (no subir grandes volúmenes a GitHub)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Checkpoints y modelos
+*.pt
+*.pth
+*.pkl
+
+# Byte-compiled / Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/

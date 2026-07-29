@@ -1,0 +1,25 @@
+dataset:
+  sample_rate: 2000
+  num_channels: 12
+  num_classes: 5
+  window_size_ms: 250
+  overlap_ms: 50
+
+processing:
+  lowcut: 20.0
+  highcut: 450.0
+  notch_freq: 50.0
+  notch_q: 30.0
+
+model:
+  conv_channels: 64
+  lstm_hidden_size: 128
+  lstm_layers: 2
+  dropout: 0.3
+  learning_rate: 0.001
+  batch_size: 64
+  epochs: 30
+
+simulation:
+  time_step: 0.01
+  gui: true
