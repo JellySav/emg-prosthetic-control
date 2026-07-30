@@ -35,10 +35,12 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Ejecutar Pruebas con Pytest
+      env:
+        PYTHONPATH: .
       run: |
         pytest tests/ --doctest-modules --junitxml=junit/test-results.xml --cov=src --cov-report=xml --cov-report=term-missing
 
-    - name: Generar Badge de Cobertura de Código (Opcional)
+    - name: Subir Artefactos de Pruebas
       if: always()
       uses: actions/upload-artifact@v4
       with:
